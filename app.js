@@ -93,7 +93,7 @@ app.use("/listings/:id/reviews",reviewsRouter);
 app.use("/",userRouter);
 
 app.get("/", (req,res)=>{
-    res.send("root page Welcome!!!!")
+    res.redirect("/listings");
 })
 app.use((req, res, next) => {
     console.log("404 REQUEST:", req.method, req.originalUrl);
